@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`getNews should throw CustomError when no query param is provided 1`] = `"Pass atleast one of matchId, tourId, sportId query param"`;
