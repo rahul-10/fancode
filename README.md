@@ -24,7 +24,7 @@ problem-statement.txt has the problems statements to be solved
 id  -->  primary key,
 title,
 description,
-type ENUM('match', 'tour'), --> Can be used to identify news was created against match or tour
+type ENUM('match', 'tour'), --> Can be used to identify whether news was created against match or tour
 matchId, ---> matchId against which news was created
 tourId, ---> tourId against which news was created or tour is associated with match for which news was created.
 sportId, ---> sport associated with tour for which news was created.
@@ -44,4 +44,25 @@ CHECK
     ) = 1
 )
 
+```
+
+#### Wrote unit tests for methods of news controllers only becasuse of time crunch.
+
+### Curl for create news endpoint
+
+```
+curl --location 'http://localhost:3000/news' \
+--header 'Content-Type: application/json' \
+--data '{
+    "title": "New News",
+    "description": "here comes description",
+    "matchId": "5",
+    "tourId": "?"
+}'
+```
+
+### Curl for get news endpoint
+
+```
+curl --location 'http://localhost:3000/news?matchId=5&tourId=1&sportId=1'
 ```

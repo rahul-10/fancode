@@ -8,10 +8,10 @@ const createNews = async (data) => {
 	const { title, description, matchId, tourId } = data;
 
 	if (!title) {
-		throw new Error('Title is missing');
+		throw new CustomError('Title is missing', 400);
 	}
 	if (!description) {
-		throw new Error('Description is missing');
+		throw new CustomError('Description is missing', 400);
 	}
 	//News can be create either match for tour
 	if ((!matchId && !tourId) || (matchId && tourId)) {

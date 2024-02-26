@@ -11,8 +11,6 @@ const pool = mysql.createPool({
 function query(sql, args) {
 	return new Promise((resolve, reject) => {
 		pool.query(sql, args, (err, rows) => {
-			console.log('sql: ', sql);
-			console.log('args: ', args);
 			if (err) return reject(err);
 			resolve(rows);
 		});

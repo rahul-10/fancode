@@ -12,8 +12,6 @@ helper
 	.forEach((filePath) => require(`./${filePath.toString()}`)(app));
 
 app.use((err, req, res, next) => {
-	console.error(err.stack);
-	console.log('err.status: ', err.statusCode);
 	res.status(err.statusCode || 500).send(err.message || 'Something broke!');
 });
 
