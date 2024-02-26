@@ -46,7 +46,7 @@ CHECK
 
 ```
 
-#### Wrote unit tests for methods of news controllers only becasuse of time crunch.
+#### Note: Wrote unit tests for methods of news controllers only becasuse of time crunch.
 
 ### Curl for create news endpoint
 
