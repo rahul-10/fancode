@@ -1,0 +1,24 @@
+# Node.js
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# Mac
+.DS_Store
+
+# Editor
+.vscode
+.idea
+*.swp
+
+# Logs
+logs
+*.log
+
+# Build files
+/dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local
